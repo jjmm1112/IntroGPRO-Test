@@ -3,18 +3,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+#include <GPRO-FW/header.h>
+#include <GPRO-FW/game.h>
 
 using namespace std;
 
-int foo(int bar);
-
 int main()
 {
-	int test = foo(9000);
+	while (true)
+	{
+		int num;
 
-	cout << test;
+		cout << "Enter a number (0 to quit): ";
 
-	//printf("\n %d \n", test); usless if using c++
+		cin >> num;
+
+		if (num == 0)
+		{
+			break;
+		}
+
+		cout << num << " is " << oddOrEven(num) << endl;
+	}
 
 	system("pause");
 }
